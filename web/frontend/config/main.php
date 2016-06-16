@@ -7,6 +7,7 @@ $params = array_merge(
 );
 
 return [
+    'defaultRoute' => 'index',
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
@@ -28,14 +29,17 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
+            'enableStrictParsing' => false,
             'showScriptName' => false,
+            'suffix' => '',
             'rules' => [
+                "<controller:\w+>/<id:\d+>"=>"<controller>/view",
+                "<controller:\w+>/<action:\w+>"=>"<controller>/<action>"
             ],
         ],
-        */
     ],
     'params' => $params,
 ];
