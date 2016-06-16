@@ -1,13 +1,29 @@
+<?php
 
+/* @var $this \yii\web\View */
+/* @var $content string */
+
+use yii\helpers\Html;
+use frontend\assets\AppAsset;
+use yii\helpers\Url;
+?>
+<script type="text/javascript">
+	jQuery(function(){
+		jQuery('#camera_wrap_1').camera({
+			thumbnails: true
+		});
+	});
+
+</script>
 	<!---End-header--->
 						<!--start-image-slider---->
 								<div class="slider">
 									<div class="fluid_container">
 										<div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
-											      <div data-thumb="images/thumbnails/slider-1.jpg" data-src="images/slider-1.jpg">  </div>
-											      <div data-thumb="images/thumbnails/slider-2.jpg" data-src="images/slider-2.jpg">  </div>
-											      <div data-thumb="images/thumbnails/slider-3.jpg" data-src="images/slider-3.jpg">  </div>
-											      <div data-thumb="images/thumbnails/slider-4.jpg" data-src="images/slider-4.jpg">  </div>
+											      <div data-thumb="<?php echo Url::to('@web/images/thumbnails/slider-1.jpg');?>" data-src="<?php echo Url::to('@web/images/slider-1.jpg');?>">  </div>
+											      <div data-thumb="<?php echo Url::to('@web/images/thumbnails/slider-2.jpg');?>" data-src="images/slider-2.jpg">  </div>
+											      <div data-thumb="<?php echo Url::to('@web/images/thumbnails/slider-3.jpg');?>" data-src="<?php echo Url::to('@web/images/slider-3.jpg');?>">  </div>
+											      <div data-thumb="<?php echo Url::to('@web/images/thumbnails/slider-4.jpg');?>" data-src="<?php echo Url::to('@web/images/slider-4.jpg');?>">  </div>
 											</div>
 							    	   </div>
 							   		   <div class="clear"></div>
@@ -22,7 +38,7 @@
 				     	        <div class="grides">
 				     				<div class="sub_grid1">
 							     		<div class="grid_img">
-							     			<img src="images/grid-img1.jpg">
+							     			<img src="<?php echo Url::to('@web/images/grid-img1.jpg');?>">
 							     		</div>
 								     		<div class="grid_data">
 								     			<h3>Neque quisquam</h3>
@@ -32,7 +48,7 @@
 				     				  </div>
 					     	<div class="sub_grid2">
 					     		<div class="grid_img">
-				     			    <img src="images/grid-img2.jpg">
+				     			    <img src="<?php echo Url::to('@web/images/grid-img2.jpg');?>">
 				     		    </div>
 				     		 <div class="grid_data">
 				     		 	<h3>Neque quisquam</h3>
@@ -44,7 +60,7 @@
 				      <div class="divider"> </div>
 				         <div class="sub_grid1">
 				     		<div class="grid_img">
-				     			<img src="images/grid-img5.jpg">
+				     			<img src="<?php echo Url::to('@web/images/grid-img5.jpg');?>">
 				     		</div>
 				     		<div class="grid_data">
 				     			<h3>Neque quisquam</h3>
@@ -54,7 +70,7 @@
 				     	</div>
 					     	<div class="sub_grid2">
 					     		<div class="grid_img">
-				     			    <img src="images/grid-img4.jpg">
+				     			    <img src="<?php echo Url::to('@web/images/grid-img4.jpg');?>">
 				     		    </div>
 				     		    <div class="grid_data">
 				     		    	<h3>Neque quisquam</h3>
@@ -67,7 +83,7 @@
 				 </div>
 				         <div class="grid2">
 				         	  <h2>What's New</h2>
-				         	  <img src="images/grid2-img.jpg">
+				         	  <img src="<?php echo Url::to('@web/images/grid-img2.jpg');?>">
 				         	  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
 					   </div>
 	       			<div class="clear"></div>
@@ -87,7 +103,7 @@
 			   <div  class="dc-grids">
 				<div class="dc-head">
 					<div class="dc-head-img">
-						<a href="#"><img src="images/dc1.jpg" title="dc-name" /></a>
+						<a href="#"><img src="<?php echo Url::to('@web/images/dc1.jpg');?>" title="dc-name" /></a>
 					</div>
 					<div class="dc-head-info">
 						<h3>Skin Care</h3>
@@ -101,7 +117,7 @@
 				</div>
 				<div class="dc-head">
 					<div class="dc-head-img">
-						<a href="#"><img src="images/dc2.jpg" title="dc-name" /></a>
+						<a href="#"><img src="<?php echo Url::to('@web/images/dc2.jpg');?>" title="dc-name" /></a>
 					</div>
 					<div class="dc-head-info">
 						<h3>Hair Care</h3>
@@ -115,7 +131,7 @@
 				</div>
 				<div class="dc-head">
 					<div class="dc-head-img">
-						<a href="#"><img src="images/dc3.jpg" title="dc-name" /></a>
+						<a href="#"><img src="<?php echo Url::to('@web/images/dc3.jpg');?>" title="dc-name" /></a>
 					</div>
 					<div class="dc-head-info">
 						<h3>Facial Treatment</h3>

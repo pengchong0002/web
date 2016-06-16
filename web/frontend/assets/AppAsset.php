@@ -27,7 +27,6 @@ class AppAsset extends AssetBundle
         'js/jquery-1.8.3.min.js',
         'js/jquery.easing.1.3.js',
         'js/camera.min.js',
-        'js/camera.min.js',
     ];
     public $depends = [
 //        'yii\web\YiiAsset',

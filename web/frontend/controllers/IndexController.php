@@ -9,9 +9,9 @@ class IndexController extends \yii\web\Controller
     {
         return $this->render('index');
     }
-    public function actionCeshi()
+    public function actionAbout()
     {
-        echo 123;
+        return $this->render('about');
     }
 
 }

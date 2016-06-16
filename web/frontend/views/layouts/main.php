@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -21,44 +22,37 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-    <script type="text/javascript">
-        jQuery(function(){
-            jQuery('#camera_wrap_1').camera({
-                thumbnails: true
-            });
-        });
-    </script>
+
 </head>
-
 <?php $this->beginBody() ?>
-
 <div class="header">
     <div class="header_top">
         <div class="wrap">
             <div class="logo">
-                <a href="index.html"><img src="images/logo.png" /></a>
+                <a href="<?php echo Url::to(['index']);?>"><img src="<?php echo Url::to('@web/images/logo.png');?>" /></a>
             </div>
             <div class="top-nav">
                 <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="staff.html">Staff</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="active" id="n1"><a href="<?php echo Url::to(['index/index']);?>">Home</a></li>
+                    <li id="n2" ><a href="<?php echo Url::to(['index/about']);?>">About</a></li>
+                    <li id="n3"><a href="staff.html">Staff</a></li>
+                    <li id="n4"><a href="services.html">Services</a></li>
+                    <li id="n5" ><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="clear"> </div>
         </div>
     </div>
+
     <div class="header_bottom phone-slogan">
         <div class="wrap">
             <div class="header-phone">
-                <h2><img src="images/phone.png" alt="" />1-234-567-8900</h2>
+                <h2><img src="<?php echo Url::to('@web/images/logo.png');?>" alt="" />1-234-567-8900</h2>
                 <h4>Neque porro quisquam, dolor sit amet, USA.</h4>
                 <span class="triangle-arrow">&nbsp;</span>
             </div>
             <div class="header-tagline">
-                <h3><img src="images/clock.png" alt="" />时间 : <span>09.30 AM - 10.00PM</span></h3>
+                <h3><img src="<?php echo Url::to('@web/images/clock.png');?>" alt="" />时间 : <span>09.30 AM - 10.00PM</span></h3>
             </div>
         </div>
     </div>
@@ -81,10 +75,10 @@ AppAsset::register($this);
                 <h3>Follow Us</h3>
                 <div class="social-icons">
                     <ul>
-                        <li><a href="#"><img src="images/facebook.png" title="facebook"></a></li>
-                        <li><a href="#"><img src="images/twitter.png" title="Twiiter"></a></li>
-                        <li><a href="#"><img src="images/rss.png" title="Rss"></a></li>
-                        <li><a href="#"><img src="images/gpluse.png" title="Google+"></a></li>
+                        <li><a href="#"><img src="<?php echo Url::to('@web/images/facebook.png');?>" title="facebook"></a></li>
+                        <li><a href="#"><img src="<?php echo Url::to('@web/images/twitter.png');?>" title="Twiiter"></a></li>
+                        <li><a href="#"><img src="<?php echo Url::to('@web/images/rss.png');?>" title="Rss"></a></li>
+                        <li><a href="#"><img src="<?php echo Url::to('@web/images/gpluse.png');?>" title="Google+"></a></li>
                     </ul>
                 </div>
                 <div class="location">
@@ -104,7 +98,7 @@ AppAsset::register($this);
             <div class="col_1_of_4 span_1_of_4">
                 <h3>Testimonials</h3>
                 <div class="Testimonials_desc">
-                    <p><span class="up"><img src="images/quotes.png" alt=""></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="down"><img src="images/quotes-down.png" alt=""></span></p>
+                    <p><span class="up"><img src="<?php echo Url::to('@web/images/quotes.png');?>" alt=""></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="down"><img src="<?php echo Url::to('@web/images/quotes-down.png');?>" alt=""></span></p>
                     <h5>- Lorem ipsum dolor</h5>
                 </div>
             </div>
