@@ -45,7 +45,7 @@
 						    <span class="triangle-arrow">&nbsp;</span>
 						</div>
 						<div class="header-tagline">
-							<h3><img src="images/clock.png" alt="" />Timmings : <span>09.30 AM - 10.00PM</span></h3>
+							<h3><img src="images/clock.png" alt="" />时间 : <span>09.30 AM - 10.00PM</span></h3>
 						</div>
 					</div>
 			   </div>
