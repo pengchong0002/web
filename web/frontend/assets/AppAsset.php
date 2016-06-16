@@ -15,15 +15,22 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
+    public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
+    public $cssOptions = ['position' => \yii\web\View::POS_HEAD];
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+        'css/style.css',
+        'css/slider.css',
     ];
     public $js = [
+        'js/jquery-1.8.3.min.js',
+        'js/jquery.easing.1.3.js',
+        'js/camera.min.js',
+        'js/camera.min.js',
     ];
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+//        'yii\web\YiiAsset',
+//        'yii\bootstrap\BootstrapAsset',
     ];
 }
