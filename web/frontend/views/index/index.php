@@ -102,14 +102,22 @@ use yii\widgets\LinkPager;
 				<div class="dc-head">
 					<div class="dc-head-img">
 						<?php if(!empty( $v['img'])) { ?>
-						<a href="#"><img src="<?php echo Url::to('@web/images/'. $v['img']);?>" title="dc-name" /></a>
+						<a href="#"><img src="<?php echo Url::to('@web/images/'. $v['img']);?>" title="优秀技师<?php echo $v['name']?>" /></a>
 						<?php } else { ?>
-							<a href="#"><img src="<?php echo Url::to('@web/images/default.jpg');?>" title="dc-name" /></a>
+							<a href="#"><img src="<?php echo Url::to('@web/images/default.jpg');?>" title="优秀技师<?php echo $v['name']?>" /></a>
 						<?php } ?>
 					</div>
 					<div class="dc-head-info">
 						<h3><?= $v['name']; ?></h3>
-						<span>totam rem aperiam</span>
+						<span><?php
+							if(!empty($v['type']))
+							{
+								echo $v['type'];
+							}else
+							{
+								echo "优秀医师";
+							}
+							?></span>
 					</div>
 					<div class="clear"> </div>
 					<div class="dc-profile">

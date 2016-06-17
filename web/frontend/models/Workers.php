@@ -14,6 +14,8 @@ use Yii;
  * @property string $work_jie
  * @property string $price
  * @property integer $times
+ * @property integer $sort
+ * @property string $type
  */
 class Workers extends \yii\db\ActiveRecord
 {
@@ -32,10 +34,11 @@ class Workers extends \yii\db\ActiveRecord
     {
         return [
             [['price'], 'number'],
-            [['times'], 'integer'],
+            [['times', 'sort'], 'integer'],
             [['name'], 'string', 'max' => 68],
             [['img'], 'string', 'max' => 57],
-            [['work_li', 'work_jie'], 'string', 'max' => 240]
+            [['work_li', 'work_jie'], 'string', 'max' => 240],
+            [['type'], 'string', 'max' => 255]
         ];
     }
 
@@ -52,6 +55,8 @@ class Workers extends \yii\db\ActiveRecord
             'work_jie' => 'Work Jie',
             'price' => 'Price',
             'times' => 'Times',
+            'sort' => 'Sort',
+            'type' => 'Type',
         ];
     }
 }
