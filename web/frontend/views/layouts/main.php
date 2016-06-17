@@ -33,11 +33,11 @@ AppAsset::register($this);
             </div>
             <div class="top-nav">
                 <ul>
-                    <li class="active" id="n1"><a href="<?php echo Url::to(['index/index']);?>">Home</a></li>
-                    <li id="n2" ><a href="<?php echo Url::to(['index/about']);?>">About</a></li>
-                    <li id="n3"><a href="staff.html">Staff</a></li>
-                    <li id="n4"><a href="services.html">Services</a></li>
-                    <li id="n5" ><a href="contact.html">Contact</a></li>
+                    <li class="active" id="n1"><a href="<?php echo Url::to(['index/index']);?>">首页</a></li>
+                    <li id="n2" ><a href="<?php echo Url::to(['index/about']);?>">关于我们</a></li>
+                    <li id="n3"><a href="staff.html">工作人员</a></li>
+                    <li id="n4"><a href="services.html">服务</a></li>
+                    <li id="n5" ><a href="contact.html">联系我们</a></li>
                 </ul>
             </div>
             <div class="clear"> </div>
@@ -47,8 +47,8 @@ AppAsset::register($this);
     <div class="header_bottom phone-slogan">
         <div class="wrap">
             <div class="header-phone">
-                <h2><img src="<?php echo Url::to('@web/images/logo.png');?>" alt="" />1-234-567-8900</h2>
-                <h4>Neque porro quisquam, dolor sit amet, USA.</h4>
+                <h2><img src="<?php echo Url::to('@web/images/logo.png');?>" alt="" />13263351424</h2>
+                <h4>Beijing HaiDian BaWei, China</h4>
                 <span class="triangle-arrow">&nbsp;</span>
             </div>
             <div class="header-tagline">
@@ -72,7 +72,7 @@ AppAsset::register($this);
     <div class="wrap">
         <div class="section group">
             <div class="col_1_of_4 span_1_of_4">
-                <h3>Follow Us</h3>
+                <h3>跟着我们</h3>
                 <div class="social-icons">
                     <ul>
                         <li><a href="#"><img src="<?php echo Url::to('@web/images/facebook.png');?>" title="facebook"></a></li>
@@ -92,18 +92,18 @@ AppAsset::register($this);
                 </div>
             </div>
             <div class="col_1_of_4 span_1_of_4">
-                <h3>Information</h3>
+                <h3>询问</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><span><a href="#">Read More[....]</a></span></p>
             </div>
             <div class="col_1_of_4 span_1_of_4">
-                <h3>Testimonials</h3>
+                <h3>推荐</h3>
                 <div class="Testimonials_desc">
                     <p><span class="up"><img src="<?php echo Url::to('@web/images/quotes.png');?>" alt=""></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="down"><img src="<?php echo Url::to('@web/images/quotes-down.png');?>" alt=""></span></p>
                     <h5>- Lorem ipsum dolor</h5>
                 </div>
             </div>
             <div class="col_1_of_4 span_1_of_4">
-                <h3>Contact Us</h3>
+                <h3>联系我们</h3>
                 <ul class="address">
                     <li>www.yourcompany(at)gmail.com</li>
                     <li><span>Mobile :</span> +12 345 67890</li>
@@ -115,7 +115,7 @@ AppAsset::register($this);
     </div>
     <div class="copy-right">
         <div class="wrap">
-            <p class="company_name">Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+            <p class="company_name">Copyright &copy; 2014.Company name All rights reserved</p>
             <div class="clear"></div>
         </div>
     </div>

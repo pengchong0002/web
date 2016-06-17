@@ -1,11 +1,8 @@
 <?php
-
-/* @var $this \yii\web\View */
-/* @var $content string */
-
 use yii\helpers\Html;
 use frontend\assets\AppAsset;
 use yii\helpers\Url;
+use yii\widgets\LinkPager;
 ?>
 <script type="text/javascript">
 	jQuery(function(){
@@ -21,7 +18,7 @@ use yii\helpers\Url;
 									<div class="fluid_container">
 										<div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
 											      <div data-thumb="<?php echo Url::to('@web/images/thumbnails/slider-1.jpg');?>" data-src="<?php echo Url::to('@web/images/slider-1.jpg');?>">  </div>
-											      <div data-thumb="<?php echo Url::to('@web/images/thumbnails/slider-2.jpg');?>" data-src="images/slider-2.jpg">  </div>
+											      <div data-thumb="<?php echo Url::to('@web/images/thumbnails/slider-2.jpg');?>" data-src="<?php echo Url::to('@web/images/slider-2.jpg');?>">  </div>
 											      <div data-thumb="<?php echo Url::to('@web/images/thumbnails/slider-3.jpg');?>" data-src="<?php echo Url::to('@web/images/slider-3.jpg');?>">  </div>
 											      <div data-thumb="<?php echo Url::to('@web/images/thumbnails/slider-4.jpg');?>" data-src="<?php echo Url::to('@web/images/slider-4.jpg');?>">  </div>
 											</div>
@@ -34,7 +31,7 @@ use yii\helpers\Url;
 		         <div class="wrap">
 			          <div class="content_top">
 				          <div class="grid1">
-				     		<h2>Latest Products</h2>
+				     		<h2>最新产品</h2>
 				     	        <div class="grides">
 				     				<div class="sub_grid1">
 							     		<div class="grid_img">
@@ -82,7 +79,7 @@ use yii\helpers\Url;
 				     </div>
 				 </div>
 				         <div class="grid2">
-				         	  <h2>What's New</h2>
+				         	  <h2>什么是新的</h2>
 				         	  <img src="<?php echo Url::to('@web/images/grid-img2.jpg');?>">
 				         	  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
 					   </div>
@@ -101,48 +98,26 @@ use yii\helpers\Url;
 		      </div>
 		      <div class="wrap">
 			   <div  class="dc-grids">
+				   <?php foreach($userinfo as $v) :?>
 				<div class="dc-head">
 					<div class="dc-head-img">
-						<a href="#"><img src="<?php echo Url::to('@web/images/dc1.jpg');?>" title="dc-name" /></a>
+						<?php if(!empty( $v['img'])) { ?>
+						<a href="#"><img src="<?php echo Url::to('@web/images/'. $v['img']);?>" title="dc-name" /></a>
+						<?php } else { ?>
+							<a href="#"><img src="<?php echo Url::to('@web/images/default.jpg');?>" title="dc-name" /></a>
+						<?php } ?>
 					</div>
 					<div class="dc-head-info">
-						<h3>Skin Care</h3>
+						<h3><?= $v['name']; ?></h3>
 						<span>totam rem aperiam</span>
 					</div>
 					<div class="clear"> </div>
 					<div class="dc-profile">
-						<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-						<a href="#">Read More</a>
+						<p><?= $v['work_jie']; ?></p>
+						<a href="#">更多</a>
 					</div>
-				</div>
-				<div class="dc-head">
-					<div class="dc-head-img">
-						<a href="#"><img src="<?php echo Url::to('@web/images/dc2.jpg');?>" title="dc-name" /></a>
-					</div>
-					<div class="dc-head-info">
-						<h3>Hair Care</h3>
-						<span>totam rem aperiam</span>
-					</div>
-					<div class="clear"> </div>
-					<div class="dc-profile">
-						<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-						<a href="#">Read More</a>
-					</div>
-				</div>
-				<div class="dc-head">
-					<div class="dc-head-img">
-						<a href="#"><img src="<?php echo Url::to('@web/images/dc3.jpg');?>" title="dc-name" /></a>
-					</div>
-					<div class="dc-head-info">
-						<h3>Facial Treatment</h3>
-						<span>totam rem aperiam</span>
-					</div>
-					<div class="clear"> </div>
-					<div class="dc-profile">
-						<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-						<a href="#">Read More</a>
-					</div>
-				</div>
+
+				</div><?php endforeach; ?>
 				<div class="clear"> </div>
 		 	 </div>
 		  </div>
