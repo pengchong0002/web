@@ -20,7 +20,7 @@ use yii\widgets\LinkPager;
 				<div class="project-top-patination">
 								<ul>
 									<li><a href="<?php echo Url::to(['index']);?>">Mainpage</a></li>
-									<li><p id="title">Staff</p></li>
+									<li><p id="title"></p></li>
 								</ul>
 							</div><br />
 			<div  class="dc-grids">
@@ -28,9 +28,9 @@ use yii\widgets\LinkPager;
 				<div class="dc-head">
 					<div class="dc-head-img">
 						<?php if(!empty( $v['img'])) { ?>
-							<a href="#"><img src="<?php echo Url::to('@web/images/'. $v['img']);?>" title="优秀技师<?php echo $v['name']?>" /></a>
+							<a href="<?php echo Url::toRoute(['more','id'=>$v['id']]);?>"><img src="<?php echo Url::to('@web/images/'. $v['img']);?>" title="优秀技师<?php echo $v['name']?>" /></a>
 						<?php } else { ?>
-							<a href="#"><img src="<?php echo Url::to('@web/images/default.jpg');?>" title="优秀技师<?php echo $v['name']?>" /></a>
+							<a href="<?php echo Url::toRoute(['more','id'=>$v['id']]);?>"><img src="<?php echo Url::to('@web/images/default.jpg');?>" title="优秀技师<?php echo $v['name']?>" /></a>
 						<?php } ?>
 					</div>
 					<div class="dc-head-info">
@@ -48,7 +48,7 @@ use yii\widgets\LinkPager;
 					<div class="clear"> </div>
 					<div class="dc-profile">
 						<p><?= $v['work_jie']; ?></p>
-						<a href="#">更多信息</a>
+						<a href="<?php echo Url::toRoute(['more','id'=>$v['id']]);?>">更多信息</a>
 					</div>
 				</div>
                  <?php endforeach;?>

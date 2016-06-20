@@ -17,6 +17,7 @@ use Yii;
  * @property integer $sort
  * @property string $type
  * * @property string $is_show
+ * * @property string $qq
  */
 class Workers extends \yii\db\ActiveRecord
 {

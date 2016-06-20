@@ -18,7 +18,9 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=E79oK4TMH0VGGshgQyZuIcI0YXBIF20n"></script>
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -36,7 +38,7 @@ AppAsset::register($this);
                     <li class="active" id="n1"><a href="<?php echo Url::to(['index/index']);?>">首页</a></li>
                     <li id="n2" ><a href="<?php echo Url::to(['index/about']);?>">关于我们</a></li>
                     <li id="n3"><a href="<?php echo Url::to(['index/staff']);?>">工作人员</a></li>
-                    <li id="n4"><a href="services.html">服务</a></li>
+                    <li id="n4"><a href="<?php echo Url::to(['index/services']);?>">服务</a></li>
                     <li id="n5" ><a href="<?php echo Url::to(['index/contact']);?>">联系我们</a></li>
                 </ul>
             </div>
@@ -93,22 +95,22 @@ AppAsset::register($this);
             </div>
             <div class="col_1_of_4 span_1_of_4">
                 <h3>询问</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><span><a href="#">Read More[....]</a></span></p>
+                <p>我们的机构都是一对一的服务你可以在这里寻找你喜欢或者想要的技师,而且不会担心自己的隐私问题,我们的技师都是经过培训出来的，保证每位客人心里和身体上双重的享受.<br><span><a href="#">Read More[....]</a></span></p>
             </div>
             <div class="col_1_of_4 span_1_of_4">
                 <h3>推荐</h3>
                 <div class="Testimonials_desc">
-                    <p><span class="up"><img src="<?php echo Url::to('@web/images/quotes.png');?>" alt=""></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="down"><img src="<?php echo Url::to('@web/images/quotes-down.png');?>" alt=""></span></p>
+                    <p><span class="up"><img src="<?php echo Url::to('@web/images/quotes.png');?>" alt=""></span>乳腺出现增生，经前乳腺的胀痛明显增加。乳腺属于肝经循行路线上的要塞，一旦肝经中有“毒”存在，乳腺增生随即产生，尤其在经血即将排出时，会因气血的充盛而变得胀痛明显。.<span class="down"><img src="<?php echo Url::to('@web/images/quotes-down.png');?>" alt=""></span></p>
                     <h5>- Lorem ipsum dolor</h5>
                 </div>
             </div>
             <div class="col_1_of_4 span_1_of_4">
                 <h3>联系我们</h3>
                 <ul class="address">
-                    <li>www.yourcompany(at)gmail.com</li>
-                    <li><span>Mobile :</span> +12 345 67890</li>
-                    <li><span>Telephone :</span> +00 000 00000</li>
-                    <li><span>Fax :</span> +00 000 00000</li>
+                    <li>www.2494032383@qq.com</li>
+                    <li><span>Mobile :</span> 13263351424</li>
+                    <li><span>Telephone :</span> 3781-5681-321</li>
+                    <li><span>QQ :</span> 2494032383</li>
                 </ul>
             </div>
         </div>

@@ -98,7 +98,32 @@ class IndexController extends \yii\web\Controller
         $model=new Message();
         $info=\Yii::$app->request->post('Message');
         $res=$model->add_info($info);
-        echo $res;
+        if($res)
+        {
+            return $this->render('ing');die;
+        }else
+        {
+            echo "<script>alert('提交失败!'); history.go(-1)</script>";
+        }
     }
+     /*
+      * 服务
+      * */
+    public function actionServices()
+    {
+        return $this->render('services');
+    }
+
+    /*
+     * 详细信息
+     * */
+    public function actionMore()
+    {
+        $id=\Yii::$app->request->get('id');
+        $model=new Workers();
+        $res=$model->find()->where('id='.$id)->asArray()->one();
+        return $this->render('info',['info'=>$res]);
+    }
+
 
 }
