@@ -33,49 +33,19 @@ use yii\widgets\LinkPager;
 				          <div class="grid1">
 				     		<h2>最新产品</h2>
 				     	        <div class="grides">
+									<?php foreach($brand as $v ):?>
 				     				<div class="sub_grid1">
 							     		<div class="grid_img">
-							     			<img src="<?php echo Url::to('@web/images/grid-img1.jpg');?>">
+							     			<img src="<?php echo Url::to('@web/images/'.$v['img']);?>">
 							     		</div>
 								     		<div class="grid_data">
-								     			<h3>Neque quisquam</h3>
-								     			<p>Finibus Bonorum Malorum  that a reader will be distracted by the readable.<a href="#">MORE INFO</a></p>
+								     			<h3><?php echo $v['name'];?></h3>
+								     			<p><?php echo $v['content']?>.<a href="#">更多信息</a></p>
 								     	  </div>
 				     	   			     <div class="clear"></div>
 				     				  </div>
-					     	<div class="sub_grid2">
-					     		<div class="grid_img">
-				     			    <img src="<?php echo Url::to('@web/images/grid-img2.jpg');?>">
-				     		    </div>
-				     		 <div class="grid_data">
-				     		 	<h3>Neque quisquam</h3>
-				     			<p>Finibus Bonorum Malorum  that a reader will be distracted by the readable. <a href="#">MORE INFO</a></p>
-				     	     </div>
-				         <div class="clear"></div>
-				 	 </div>
-				 <div class="clear"></div>
-				      <div class="divider"> </div>
-				         <div class="sub_grid1">
-				     		<div class="grid_img">
-				     			<img src="<?php echo Url::to('@web/images/grid-img5.jpg');?>">
-				     		</div>
-				     		<div class="grid_data">
-				     			<h3>Neque quisquam</h3>
-				     			<p>Finibus Bonorum Malorum  that a reader will be distracted by the readable. <a href="#">MORE INFO</a></p>
-				     	    </div>
-				     	   <div class="clear"></div>
-				     	</div>
-					     	<div class="sub_grid2">
-					     		<div class="grid_img">
-				     			    <img src="<?php echo Url::to('@web/images/grid-img4.jpg');?>">
-				     		    </div>
-				     		    <div class="grid_data">
-				     		    	<h3>Neque quisquam</h3>
-				     			   <p>Finibus Bonorum Malorum  that a reader will be distracted by the readable. <a href="#">MORE INFO</a></p>
-				     	        </div>
-				     		<div class="clear"></div>
-				 		</div>
-				       <div class="clear"></div>
+                                   <?php endforeach;?>
+
 				     </div>
 				 </div>
 				         <div class="grid2">

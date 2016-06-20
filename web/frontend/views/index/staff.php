@@ -4,14 +4,23 @@ use frontend\assets\AppAsset;
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
 ?>
+<!--n3 is staff-->
+<script>
+	$(document).ready(function(){
+		$(".active").prop('class','');
+		$("#n3").prop('class','active');
+		var zhi=$("#n3").html();
+		$("#title").html(zhi)
+	})
+</script>
 		<!---start-content---->
 		<div class="wrap">
 		<div class="content">
 			<div class="our-staff">
 				<div class="project-top-patination">
 								<ul>
-									<li><a href="index.html">Mainpage</a></li>
-									<li><p>Staff</p></li>
+									<li><a href="<?php echo Url::to(['index']);?>">Mainpage</a></li>
+									<li><p id="title">Staff</p></li>
 								</ul>
 							</div><br />
 			<div  class="dc-grids">

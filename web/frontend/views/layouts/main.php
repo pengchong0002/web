@@ -37,7 +37,7 @@ AppAsset::register($this);
                     <li id="n2" ><a href="<?php echo Url::to(['index/about']);?>">关于我们</a></li>
                     <li id="n3"><a href="<?php echo Url::to(['index/staff']);?>">工作人员</a></li>
                     <li id="n4"><a href="services.html">服务</a></li>
-                    <li id="n5" ><a href="contact.html">联系我们</a></li>
+                    <li id="n5" ><a href="<?php echo Url::to(['index/contact']);?>">联系我们</a></li>
                 </ul>
             </div>
             <div class="clear"> </div>

@@ -3,6 +3,8 @@
 namespace frontend\controllers;
 use frontend\models\Workers;
 use yii\data\Pagination;
+use frontend\models\Brand;
+use frontend\models\Message;
 
 class IndexController extends \yii\web\Controller
 {
@@ -18,14 +20,16 @@ class IndexController extends \yii\web\Controller
         $cache=\Yii::$app->cache;
         $get=$cache->get('main');
         $model=new Workers();
+        $model1=new Brand();
         if(CACHT_ON=='true')
         {
             if($get)
             {  //存在
                 if(time()-$get['time']>=CACHT_TIME)
                 {  //过期了
-                    $info=$model->find()->orderBy('sort desc')->limit(3)->asArray()->all();
-                    $data['data']=$this->render('index',['userinfo'=>$info]);
+                    $info=$model->find()->where('is_show=0')->orderBy('sort desc')->limit(3)->asArray()->all();
+                    $info1=$model1->find()->where('state=1')->limit(4)->asArray()->all();
+                    $data['data']=$this->render('index',['userinfo'=>$info,'brand'=>$info1]);
                     $data['time']=time();
                     $cache->set('main',$data,CACHT_TIME);
                     echo $data['data'];die;
@@ -33,37 +37,68 @@ class IndexController extends \yii\web\Controller
                 echo $get['data'];
             }else
             {//不存在
-                $info=$model->find()->orderBy('sort desc')->limit(3)->asArray()->all();
+                $info=$model->find()->where('is_show=0')->orderBy('sort desc')->limit(3)->asArray()->all();
+                $info1=$model1->find()->where('state=1')->limit(4)->asArray()->all();
                 $data['time']=time();
-                $data['data']=$this->render('index',['userinfo'=>$info]);
+                $data['data']=$this->render('index',['userinfo'=>$info,'brand'=>$info1]);
                 $cache->set('main',$data,CACHT_TIME);
                 echo $data['data'];
             }
         }else
         {
-            $info=$model->find()->orderBy('sort desc')->limit(3)->asArray()->all();
-            return $this->render('index',['userinfo'=>$info]);
+            $info=$model->find()->where('is_show=0')->orderBy('sort desc')->limit(3)->asArray()->all();
+            $info1=$model1->find()->where('state=1')->limit(4)->asArray()->all();
+            return $this->render('index',['userinfo'=>$info,'brand'=>$info1]);
         }
     }
-
-
+    /**
+     * 关于我们
+     * about
+     */
     public function actionAbout()
     {
         return $this->render('about');
     }
+    /**
+     * 清除缓存(后台调用)
+     * delete
+     */
     public function actionDelete()
     {
         $chache=\Yii::$app->cache;
         $chache->delete('main');
     }
-
+    /**
+     * 工作人员
+     * staff
+     */
     public function actionStaff()
     {
         $model=new Workers();
-        $data = $model->find();
+        $data = $model->find()->where('is_show=0');
         $pages = new Pagination(['totalCount' =>$data->count(), 'pageSize' => '6']);
         $info = $data->offset($pages->offset)->limit($pages->limit)->all();
         return $this->render('staff',['info' => $info,'pages' => $pages]);
+    }
+    /**
+     * 联系我们
+     * contact
+     */
+    public function actionContact()
+    {
+        $model=new Message();
+        return $this->render('contact',['model'=>$model]);
+    }
+
+    /*
+     * 联系方式入库
+     * */
+    public function actionMessage_add()
+    {
+        $model=new Message();
+        $info=\Yii::$app->request->post('Message');
+        $res=$model->add_info($info);
+        echo $res;
     }
 
 }

@@ -16,6 +16,7 @@ use Yii;
  * @property integer $times
  * @property integer $sort
  * @property string $type
+ * * @property string $is_show
  */
 class Workers extends \yii\db\ActiveRecord
 {
@@ -57,6 +58,7 @@ class Workers extends \yii\db\ActiveRecord
             'times' => 'Times',
             'sort' => 'Sort',
             'type' => 'Type',
+            'is_show' => 'Is Show',
         ];
     }
 }
