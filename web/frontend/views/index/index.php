@@ -12,6 +12,15 @@ use yii\widgets\LinkPager;
 	});
 
 </script>
+<!--n3 is staff-->
+<script>
+	$(document).ready(function(){
+		$(".active").prop('class','');
+		$("#n1").prop('class','active');
+		var zhi=$("#n1").html();
+		$("#title").html(zhi)
+	})
+</script>
 	<!---End-header--->
 						<!--start-image-slider---->
 								<div class="slider">

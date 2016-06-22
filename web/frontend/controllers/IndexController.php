@@ -5,6 +5,8 @@ use frontend\models\Workers;
 use yii\data\Pagination;
 use frontend\models\Brand;
 use frontend\models\Message;
+use frontend\models\Yue;
+use yii\helpers\Url;
 
 class IndexController extends \yii\web\Controller
 {
@@ -80,6 +82,39 @@ class IndexController extends \yii\web\Controller
         $pages = new Pagination(['totalCount' =>$data->count(), 'pageSize' => '6']);
         $info = $data->offset($pages->offset)->limit($pages->limit)->all();
         return $this->render('staff',['info' => $info,'pages' => $pages]);
+    }
+
+    /*
+     * 预约
+     * */
+    public function actionYue()
+    {
+         $w_id=\Yii::$app->request->get('id');
+         $model=new Workers();
+         $res=$model->find($w_id)->asArray()->one();
+         return $this->render('yue',['info'=>$res]);
+    }
+
+    /*
+     * 预约入库
+     * */
+    public function actionYue_add()
+    {
+        $model=new Yue();
+        $model->name=\Yii::$app->request->post('name');
+        $model->email=\Yii::$app->request->post('email');
+        $model->phone=\Yii::$app->request->post('phone');
+        $time=\Yii::$app->request->post('time');
+        $model->time=strtotime($time);
+        $model->w_id=\Yii::$app->request->post('w_id');
+        if($model->save())
+        {
+            $web=Url::to(['index/index']);
+            echo "<script>alert('预约成功,请及时到达O(∩_∩)O');location.href='$web'</script>";
+        }else
+        {
+           echo "<script>alert('预约失败!');history.ho(-1)</script>";
+        }
     }
     /**
      * 联系我们

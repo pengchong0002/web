@@ -32,4 +32,15 @@ class AppAsset extends AssetBundle
 //        'yii\web\YiiAsset',
 //        'yii\bootstrap\BootstrapAsset',
     ];
+
+    public static function addscript($view,$jsfile)
+    {
+        $view->registerJsfile($jsfile,[AppAsset::className(),'depends'=>'frontend\assets\AppAsset','position' => \yii\web\View::POS_HEAD]);  //js在header里
+    }
+
+
+    public static function addcss($view,$css)
+    {
+        $view->registerCssfile($css,[AppAsset::className(),'depends'=>'frontend\assets\AppAsset','position' => \yii\web\View::POS_HEAD]);
+    }
 }

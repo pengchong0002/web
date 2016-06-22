@@ -38,7 +38,9 @@ use yii\widgets\ActiveForm;
             <div>
                 <span>
                     <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $info['qq'];?>&site=qq&menu=yes">
-                    <input type="button" class="mybutton" value="联系他(她)"></a></span>
+                    <input type="button" class="mybutton" value="联系他(她)"></a>
+                    &nbsp;&nbsp;&nbsp;
+                 <a href="<?php echo Url::toRoute(['yue','id'=>$info['id']])?>"><input type="button" class="mybutton" value="预约"></a></span>
             </div>
 
     </div>

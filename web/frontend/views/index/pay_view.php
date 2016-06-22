@@ -15,10 +15,10 @@ use yii\widgets\ActiveForm;
                 <select name="money" id="">
                     <option value="0.1">0.1</option>
                     <option value="100">100</option>
-                    <option value="200">100</option>
-                    <option value="500">100</option>
-                    <option value="1000">100</option>
-                    <option value="5000">30000</option>
+                    <option value="200">200</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                    <option value="5000">5000</option>
                 </select>
             </td>
         </tr>

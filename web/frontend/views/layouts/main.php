@@ -35,7 +35,7 @@ AppAsset::register($this);
             </div>
             <div class="top-nav">
                 <ul>
-                    <li class="active" id="n1"><a href="<?php echo Url::to(['index/index']);?>">首页</a></li>
+                    <li id="n1"><a href="<?php echo Url::to(['index/index']);?>">首页</a></li>
                     <li id="n2" ><a href="<?php echo Url::to(['index/about']);?>">关于我们</a></li>
                     <li id="n3"><a href="<?php echo Url::to(['index/staff']);?>">工作人员</a></li>
                     <li id="n4"><a href="<?php echo Url::to(['index/services']);?>">服务</a></li>
