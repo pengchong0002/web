@@ -111,6 +111,13 @@ AppAsset::register($this);
                     <li><span>Mobile :</span> 13263351424</li>
                     <li><span>Telephone :</span> 3781-5681-321</li>
                     <li><span>QQ :</span> 2494032383</li>
+                    <li><span>赞助 :
+
+                        </span>
+                        <a target="_blank" href="<?php echo Url::to('pay_view')?>">
+                        <img src="<?php echo Url::to('@web/images/zfb.jpg')?>" height="30" width="30" style="margin-left: 30px;" alt="支付宝转账">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

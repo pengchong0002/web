@@ -45,8 +45,8 @@ use yii\widgets\LinkPager;
 				     	   			     <div class="clear"></div>
 				     				  </div>
                                    <?php endforeach;?>
-
 				     </div>
+							  <a href="<?php echo Url::toRoute('brand_more');?>" style="color:#FFAF2C;">查看更多</a>
 				 </div>
 				         <div class="grid2">
 				         	  <h2>每日推荐新品</h2>
