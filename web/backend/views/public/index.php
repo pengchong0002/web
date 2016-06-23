@@ -1,47 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>±£Ω°“Ω¡∆∫ÛÃ®π‹¿Ì</title>
-		<meta name="keywords" content="Bootstrapƒ£∞Ê,Bootstrapƒ£∞Êœ¬‘ÿ,BootstrapΩÃ≥Ã,Bootstrap÷–Œƒ" />
-		<meta name="description" content="’æ≥§Àÿ≤ƒÃ·π©Bootstrapƒ£∞Ê,BootstrapΩÃ≥Ã,Bootstrap÷–Œƒ∑≠“Îµ»œ‡πÿBootstrap≤Âº˛œ¬‘ÿ" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-		<!-- basic styles -->
-
-		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-
-		<!--[if IE 7]>
-		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
-		<![endif]-->
-
-		<!-- page specific plugin styles -->
-
-		<!-- fonts -->
-
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
-
-		<!-- ace styles -->
-
-		<link rel="stylesheet" href="assets/css/ace.min.css" />
-		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
-
-		<!--[if lte IE 8]>
-		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
-		<![endif]-->
-
-		<!-- inline styles related to this page -->
-
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-
-		<!--[if lt IE 9]>
-		<script src="assets/js/html5shiv.js"></script>
-		<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
-	</head>
-
-	<body class="login-layout">
+Ôªø<body class="login-layout">
 		<div class="main-container">
 			<div class="main-content">
 				<div class="row">
@@ -69,7 +26,7 @@
 
 											<div class="space-6"></div>
 
-											<form>
+											<form action="index/index" method="post">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
@@ -93,7 +50,7 @@
 															<span class="lbl"> Remember Me</span>
 														</label>
 
-														<button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+														<button type="submit" class="width-35 pull-right btn btn-sm btn-primary">
 															<i class="icon-key"></i>
 															Login
 														</button>
