@@ -130,7 +130,7 @@ class Workers extends \yii\db\ActiveRecord
     public function detailsupdate($id){
         return Yii::$app->db->createCommand("select id,work_li,work_jie from workers where id='$id'")->queryOne();
     }
-    /* author:张佩
+  /* author:张佩
    * models:update_details
    * meaning:医生详情的编辑
    * times:2016/6/21整合
@@ -141,5 +141,13 @@ class Workers extends \yii\db\ActiveRecord
         $work_jie=$arrlist['work_jie'];
         $db=\Yii::$app->db->createCommand();
         return $db->update('workers',['work_li'=> $work_li,'work_jie'=>$work_jie,'work_jie'=>$work_jie],"id=:id",[':id'=>$id])->execute();
+    }
+     /* author:张佩
+      * models:select_doctor
+      * meaning:预约医生的查询
+      * times:2016/6/21整合
+      */
+    public  function select_doctor(){
+        return Yii::$app->db->createCommand("select id,name from workers")->queryAll();
     }
 }
