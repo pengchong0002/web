@@ -55,7 +55,7 @@ class IndexController extends \yii\web\Controller
         if (Yii::$app->request->isPost) {
             $request = Yii::$app->request;
             $get = $request->post();
-            $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
+            $model->img = UploadedFile::getInstance($model, 'img');
             $img=$model->upload();
             $arr1=  $model->uplode1($img,$get);
             if($arr1)

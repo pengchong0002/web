@@ -8,7 +8,7 @@ use Yii;
  * This is the model class for table "brand".
  *
  * @property integer $id
- * @property string $imageFile
+ * @property string $img
  * @property string $name
  * @property string $content
  * @property string $fuction
@@ -33,7 +33,7 @@ class Brand extends \yii\db\ActiveRecord
     {
         return [
             [['state', 'price'], 'integer'],
-            [['imageFile'], 'string', 'max' => 57],
+            [['img'], 'string', 'max' => 57],
             [['name'], 'string', 'max' => 68],
             [['content', 'fuction'], 'string', 'max' => 240],
             [['type'], 'string', 'max' => 255]
@@ -47,7 +47,7 @@ class Brand extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'imageFile' => 'Image File',
+            'img' => 'Image File',
             'name' => 'Name',
             'content' => 'Content',
             'fuction' => 'Fuction',
@@ -63,8 +63,8 @@ class Brand extends \yii\db\ActiveRecord
     */
     public function upload()
     {
-        $this->imageFile->saveAs('uploads/' . $this->imageFile->baseName . '.' . $this->imageFile->extension);
-        return $this->imageFile->name;
+        $this->img->saveAs('uploads/' . $this->img->baseName . '.' . $this->img->extension);
+        return $this->img->name;
     }
     /*author:胡一博
      * models:uplode1
@@ -72,7 +72,7 @@ class Brand extends \yii\db\ActiveRecord
      *times:2016/6/20整合
      */
     function uplode1($img,$get){
-        $this->imageFile=$img;
+        $this->img=$img;
         $this->name=$get['name'];
         $this->content=$get['content'];
         $this->fuction=$get['fuction'];

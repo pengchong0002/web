@@ -99,10 +99,10 @@ use yii\widgets\LinkPager;
                                         </td>
 
                                         <td>
-                                            <a href="./uploads/<?php echo $model['imageFile']?>" data-rel="colorbox">
+                                            <a href="./uploads/<?php echo $model['img']?>" data-rel="colorbox">
 
 
-                                            <img class="image" width="30" src="./uploads/<?php echo $model['imageFile']?>" alt=""/></td>
+                                            <img class="image" width="30" src="./uploads/<?php echo $model['img']?>" alt=""/></td>
                                         </a>
                                         <td class="hidden-480"><?php echo $model['content']?></td>
                                         <td><?php echo $model['fuction']?></td>

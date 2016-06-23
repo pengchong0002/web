@@ -52,7 +52,7 @@ use yii\widgets\ActiveForm;
                     <td>产品照片：</td>
                     <td>
                         <!--                                <input type="file" name="imageFile"/>-->
-                        <?= $form->field($model, 'imageFile')->fileInput() ?>
+                        <?= $form->field($model, 'img',['labelOptions' => ['label' => '']])->fileInput() ?>
 
 
 
