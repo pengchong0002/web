@@ -110,6 +110,7 @@ class IndexController extends \yii\web\Controller
         if($model->save())
         {
             $web=Url::to(['index/index']);
+            $this->send_email(\Yii::$app->request->post('name'),$time);
             echo "<script>alert('预约成功,请及时到达O(∩_∩)O');location.href='$web'</script>";
         }else
         {
@@ -142,6 +143,20 @@ class IndexController extends \yii\web\Controller
             echo "<script>alert('提交失败!'); history.go(-1)</script>";
         }
     }
+
+    /*
+     * 发送邮件
+     * */
+    private function send_email($name,$time)
+    {
+        $mail= \Yii::$app->mailer->compose();
+        $mail->setTo('2494032383@qq.com');
+        $mail->setSubject("八维保健品店提示您,您已预约成功");
+        $web=$this->render('qq_email',['name'=>$name,'time'=>$time]);
+        $mail->setTextBody(" 欢迎 ".$name."先生预约成功,请您在".$time."之前到达");
+        $mail->send();
+    }
+
      /*
       * 服务
       * */
