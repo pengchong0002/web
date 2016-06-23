@@ -77,14 +77,7 @@
 								<i class="icon-caret-down"></i>
 							</a>
 
-							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-								<li>
-									<a href="<?= Yii::$app->urlManager->createUrl(['pulic/quit'])?>">
-										<i class="icon-off"></i>
-										退出
-									</a>
-								</li>
-							</ul>
+
 						</li>
 					</ul><!-- /.ace-nav -->
 				</div><!-- /.navbar-header -->
@@ -216,6 +209,34 @@
 										<i class="icon-double-angle-right"></i>
 										员工列表
 									</a>
+								</li>
+
+									</ul>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-desktop"></i>
+								<span class="menu-text">预约管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="<?= Yii::$app->urlManager->createUrl(['yuelist/index'])?>">
+										<i class="icon-double-angle-right"></i>
+										预约添加
+									</a>
+								</li>
+
+								<li>
+									<a href="<?= Yii::$app->urlManager->createUrl(['yuelist/showlist'])?>">
+										<i class="icon-double-angle-right"></i>
+										预约列表
+									</a>
+								</li>
+							</ul>
+						</li>
 								</li>
 							</ul>
 						</li>
